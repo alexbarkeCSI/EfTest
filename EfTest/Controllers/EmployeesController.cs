@@ -54,7 +54,7 @@ namespace EfTest.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Organization")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Organization,Dob")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace EfTest.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,FirstName,LastName,Organization")] Employee employee)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,FirstName,LastName,Organization,Dob")] Employee employee)
         {
             if (id != employee.Id)
             {
